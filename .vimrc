@@ -36,6 +36,7 @@ call vundle#end()
 
 filetype plugin indent on
 "##################################################################[default value set]
+let mapleader=','
 set modelines=0
 set backspace=2 "设置更好的删除
 syntax on "语法高亮
@@ -518,9 +519,7 @@ if executable('ag')
 else
     let g:ctrlp_use_caching = 1
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-    let g:ctrlp_prompt_mappings = {
-    'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
-    }
+    let g:ctrlp_prompt_mappings = {    'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>']    }
 endif
 
 " echo "g:ctrlp_user_command :" g:ctrlp_user_command
